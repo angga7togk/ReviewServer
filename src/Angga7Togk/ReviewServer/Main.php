@@ -37,6 +37,7 @@ class Main extends PluginBase implements Listener{
                 return true;
             } else {
                 $sender->sendMessage("please use command in game!");
+                return true;
             }
         } else {
             return true;
