@@ -27,7 +27,7 @@ class Main extends PluginBase implements Listener{
         $this->dt = new Config($this->getDataFolder() . "data.yml", Config::YAML, array());
     }
     
-    public function onCommand(CommandSender $sender, Command $cmd, string $label,  array $args) : bool{
+    public function onCommand(CommandSender $sender, Command $cmd, string $label,  array $args) : bool {
         
         if($cmd->getName() == "review"){
             if($sender instanceof Player){
@@ -35,7 +35,11 @@ class Main extends PluginBase implements Listener{
                 $this->config->reload();
                 $this->ReviewUI($sender);
                 return true;
+            } else {
+                $sender->sendMessage("please use command in game!");
             }
+        } else {
+            return true;
         }
     }
     
