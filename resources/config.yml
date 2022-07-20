@@ -1,0 +1,18 @@
+Version: 1.0.0
+Name: ReviewServer
+
+# Menu Form
+Menu:
+  Title: "§lReview"
+  Content: "Edit in config.yml!"
+  Button1: "§l§eCreate Review\n§rTap To Enter!"
+  Button2: "§l§eReview List\n§rTap To Enter!"
+  Button-Exit: "§l§cExit Button"
+
+# Title & Content Create Review Form!
+title-cr: "§lCreate Review"
+content-cr: "Edit in config.yml!"
+
+# Title & Button Exit Review List Form!
+title-rl: "§lReview List"
+button-rl: "§l§cBack To Menu"
