@@ -17,6 +17,7 @@ use Angga7Togk\ReviewServer\Form\CustomForm;
 class Main extends PluginBase implements Listener{
     
     public Config $config;
+    public Config $dt;
     
     public function onEnable() : void {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
@@ -26,12 +27,15 @@ class Main extends PluginBase implements Listener{
         $this->dt = new Config($this->getDataFolder() . "data.yml", Config::YAML, array());
     }
     
-    public function onCommand(CommandSender $sender, Command $cmd, string $label,  array $args) : bool {
+    public function onCommand(CommandSender $sender, Command $cmd, string $label,  array $args) : bool{
+        
         if($cmd->getName() == "review"){
-            $this->dt->reload();
-            $this->config->reload();
-            $this->ReviewUI($sender);
-            return true;
+            if($sender instanceof Player){
+                $this->dt->reload();
+                $this->config->reload();
+                $this->ReviewUI($sender);
+                return true;
+            }
         }
     }
     
