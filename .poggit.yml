@@ -1,0 +1,9 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/angga7togk/ReviewServer
+build-by-default: true
+branches:
+- main
+projects:
+  ReviewServer:
+    path: ""
+    icon: "review.png"
+...
